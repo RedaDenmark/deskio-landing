@@ -10,7 +10,7 @@ function Spark({ color }: { color: string }) {
       style={{
         position: 'absolute',
         left: '50%',
-        bottom: '0.88em',
+        bottom: '1.05em',
         transform: 'translateX(-50%)',
         width: '0.35em',
         height: '0.35em',
