@@ -133,8 +133,10 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6">
-                AI-receptionist til{' '}
-                <Typewriter />
+                AI-receptionist til<br />
+                <span className="block h-[1.2em]">
+                  <Typewriter />
+                </span>
               </h1>
 
               <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">

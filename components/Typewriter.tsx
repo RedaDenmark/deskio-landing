@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
 
-const WORDS = ['frisørsaloner', 'tandlæger', 'restauranter', 'klinikker', 'butikker', 'din virksomhed']
+const WORDS = ['frisørsaloner', 'tandlæger', 'restauranter', 'klinikker', 'butikker', 'virksomheder']
 
 export default function Typewriter() {
   const [wordIndex, setWordIndex] = useState(0)
