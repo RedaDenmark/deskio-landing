@@ -16,11 +16,22 @@ function Spark({ color }: { color: string }) {
         height: '0.35em',
         overflow: 'visible',
         pointerEvents: 'none',
+        animation: 'deskio-pulse 2s ease-in-out infinite',
       }}
     >
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="1.5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
       <path
         d="M5 0 L5.6 3.8 L10 5 L5.6 6.2 L5 10 L4.4 6.2 L0 5 L4.4 3.8 Z"
         fill={color}
+        filter="url(#glow)"
       />
     </svg>
   )
