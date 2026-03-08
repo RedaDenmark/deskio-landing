@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="8" fill="#7c3aed"/>
+  <!-- Letter D -->
+  <text x="5" y="24" font-family="Inter, Arial, sans-serif" font-weight="900" font-size="22" fill="white">D</text>
+  <!-- Glowing dot (top right accent) -->
+  <circle cx="26" cy="7" r="3.5" fill="#a78bfa"/>
+  <circle cx="26" cy="7" r="3.5" fill="#a78bfa" opacity="0.4" r="5"/>
+</svg>

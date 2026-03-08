@@ -5,6 +5,7 @@ import Typewriter from '@/components/Typewriter'
 import ChatDemo from '@/components/ChatDemo'
 import FadeUp from '@/components/FadeUp'
 import EraTimeline from '@/components/EraTimeline'
+import DeskioLogo from '@/components/DeskioLogo'
 
 const DASHBOARD_URL = 'https://dashboard.deskio.dk'
 
@@ -117,7 +118,7 @@ export default function HomePage() {
             <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
               <Bot className="w-4 h-4 text-white" />
             </div>
-            <span className="font-bold text-white text-lg tracking-tight">Deskio</span>
+            <DeskioLogo size="md" />
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
             <a href="#evolution" className="hover:text-white transition-colors">Historien</a>
@@ -374,12 +375,12 @@ export default function HomePage() {
       {/* ── FOOTER ──────────────────────────────────────────────────────────── */}
       <footer className="border-t border-white/5 py-10 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600">
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 bg-brand-600 rounded-md flex items-center justify-center">
-              <Bot className="w-3 h-3 text-white" />
-            </div>
-            <span className="font-semibold text-gray-400">Deskio</span>
-          </div>
+               <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 bg-brand-600 rounded-md flex items-center justify-center">
+                    <Bot className="w-3 h-3 text-white" />
+                  </div>
+                  <DeskioLogo size="sm" />
+                </div>
           <span>© 2026 Deskio. Alle rettigheder forbeholdes.</span>
           <div className="flex gap-6">
             <Link href={`${DASHBOARD_URL}/login`} className="hover:text-gray-400 transition-colors">Log ind</Link>
