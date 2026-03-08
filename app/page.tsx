@@ -4,6 +4,7 @@ import { Bot, Zap, Globe, Users, Calendar, BookOpen, ArrowRight, Check } from 'l
 import Typewriter from '@/components/Typewriter'
 import ChatDemo from '@/components/ChatDemo'
 import FadeUp from '@/components/FadeUp'
+import EraTimeline from '@/components/EraTimeline'
 
 const DASHBOARD_URL = 'https://dashboard.deskio.dk'
 
@@ -188,58 +189,7 @@ export default function HomePage() {
             </p>
           </FadeUp>
 
-          <div className="space-y-8">
-            {ERAS.map((era, i) => (
-              <FadeUp key={era.year} delay={i * 100}>
-                <div className={`relative rounded-2xl overflow-hidden border ${era.highlight ? 'border-brand-500/40' : 'border-white/5'} bg-gradient-to-r ${era.bg}`}>
-                  {era.highlight && (
-                    <div className="absolute inset-0 bg-brand-600/5 pointer-events-none" />
-                  )}
-                  <div className="flex flex-col md:flex-row items-stretch">
-                    {/* Image */}
-                    <div className="relative w-full md:w-72 lg:w-96 h-52 md:h-auto flex-shrink-0 overflow-hidden">
-                      <Image
-                        src={era.image}
-                        alt={era.title}
-                        fill
-                        className="object-cover"
-                        style={{ filter: era.filter }}
-                        sizes="(max-width: 768px) 100vw, 384px"
-                      />
-                      {/* Gradient fade to content on desktop */}
-                      <div className="hidden md:block absolute inset-y-0 right-0 w-24 bg-gradient-to-r from-transparent to-[inherit]" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="flex-1 p-6 md:p-8 flex flex-col justify-center">
-                      <div className="flex items-center gap-3 mb-3">
-                        <span className={`text-xs font-bold px-3 py-1 rounded-full border ${era.badge}`}>
-                          {era.year}
-                        </span>
-                        {era.highlight && (
-                          <span className="text-xs font-semibold text-emerald-400 flex items-center gap-1">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                            Live nu
-                          </span>
-                        )}
-                      </div>
-                      <h3 className={`text-2xl font-bold mb-2 ${era.highlight ? 'text-white' : 'text-gray-200'}`}>
-                        {era.title}
-                      </h3>
-                      <p className="text-gray-400 leading-relaxed">{era.desc}</p>
-
-                      {era.highlight && (
-                        <Link href={`${DASHBOARD_URL}/register`}
-                          className="mt-5 self-start inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-xl transition-all hover:scale-105 text-sm">
-                          Start med Deskio gratis <ArrowRight className="w-4 h-4" />
-                        </Link>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
+          <EraTimeline eras={ERAS} />
         </div>
       </section>
 
