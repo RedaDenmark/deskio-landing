@@ -9,12 +9,37 @@ export default function DeskioLogo({ size = 'md', className = '' }: Props) {
   return (
     <span className={`font-bold tracking-tight select-none ${textSize} ${className}`}>
       <span className="text-white">Desk</span>
-      <span className="text-brand-400 relative">
-        <span className="relative inline-block">
-          <span className="relative">i</span>
-          {/* Glowing dot — tightly above the i's natural dot position */}
+      <span className="text-brand-400">
+        <span className="relative inline-block" style={{ lineHeight: 'inherit' }}>
+          <span>i</span>
+          {/* Blurred purple glow layer */}
           <span
-            className="absolute left-1/2 -translate-x-1/2 -top-[0.05em] w-[0.15em] h-[0.15em] rounded-full bg-brand-400 shadow-[0_0_5px_2px_rgba(139,92,246,0.8)] animate-pulse"
+            className="absolute animate-pulse"
+            style={{
+              width: '0.35em',
+              height: '0.35em',
+              top: '-0.05em',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              borderRadius: '50%',
+              background: 'rgba(139,92,246,0.5)',
+              filter: 'blur(3px)',
+              pointerEvents: 'none',
+            }}
+          />
+          {/* Small solid core dot */}
+          <span
+            className="absolute"
+            style={{
+              width: '0.13em',
+              height: '0.13em',
+              top: '0.04em',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              borderRadius: '50%',
+              background: '#a78bfa',
+              pointerEvents: 'none',
+            }}
           />
         </span>
         o
