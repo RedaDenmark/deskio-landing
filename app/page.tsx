@@ -202,7 +202,7 @@ export default function HomePage() {
               Alt din receptionist<br />burde kunne gøre
             </h2>
             <p className="text-gray-400 text-lg max-w-xl mx-auto">
-              Ingen overtid. Ingen sygemelding. Ingen dårlig dag.
+              Alt din virksomhed har brug for —<br />altid klar til dine kunder.
             </p>
           </FadeUp>
 
