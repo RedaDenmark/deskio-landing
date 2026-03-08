@@ -27,8 +27,13 @@ export default function EraTimeline({ eras }: Props) {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(-1)
   const [lineHeight, setLineHeight] = useState(0)
+  // Start as false — cards render fully visible on the server (no opacity-0 flash).
+  // After hydration we flip to true and let scroll observers control visibility.
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+
     const observers: IntersectionObserver[] = []
 
     itemRefs.current.forEach((el, i) => {
@@ -77,8 +82,13 @@ export default function EraTimeline({ eras }: Props) {
           <div
             key={era.year}
             ref={el => { itemRefs.current[i] = el }}
+            style={{ willChange: 'opacity, transform' }}
             className={`relative flex gap-6 sm:gap-10 md:gap-14 transition-all duration-700 ${
-              activeIndex >= i ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+              !mounted
+                ? 'opacity-100 translate-y-0'               // SSR / pre-hydration: always visible
+                : activeIndex >= i
+                ? 'opacity-100 translate-y-0'               // activated by scroll
+                : 'opacity-0 translate-y-6'                 // waiting to animate in
             }`}
           >
             {/* ── Dot ── */}
