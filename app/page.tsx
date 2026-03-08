@@ -68,7 +68,7 @@ const FEATURES = [
 
 const STEPS = [
   { n: '01', title: 'Opret en konto',         desc: 'Tilmeld dig gratis på under 2 minutter. Ingen kreditkort kræves.' },
-  { n: '02', title: 'Besvær din virksomhed',  desc: 'Fortæl AI\'en om dine services, åbningstider og hvad den må hjælpe med.' },
+  { n: '02', title: 'Beskriv din virksomhed',  desc: 'Fortæl AI\'en om dine services, åbningstider og hvad den må hjælpe med.' },
   { n: '03', title: 'Installer widget',       desc: 'Indsæt ét script-tag på din hjemmeside — det er det hele.' },
 ]
 
