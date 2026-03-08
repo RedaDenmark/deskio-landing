@@ -133,13 +133,12 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight tracking-tight mb-6">
-                Din AI-receptionist<br className="hidden md:block" /> til{' '}
+                AI-receptionist til{' '}
                 <Typewriter />
               </h1>
 
               <p className="text-lg text-gray-400 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                Svar på kundespørgsmål, book aftaler og fang leads automatisk — 24 timer i døgnet, 7 dage om ugen.
-                Ingen løn. Ingen sygedage. Aldrig optaget.
+                Mens du passer din virksomhed, passer Deskio dine kunder. Book aftaler, fang leads og svar på spørgsmål — automatisk.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
