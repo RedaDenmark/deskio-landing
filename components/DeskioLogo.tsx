@@ -3,6 +3,31 @@ interface Props {
   className?: string
 }
 
+// 4-point spark SVG — replaces the dot on the "i"
+function Spark({ color }: { color: string }) {
+  return (
+    <svg
+      viewBox="0 0 10 10"
+      style={{
+        position: 'absolute',
+        left: '50%',
+        top: 0,
+        transform: 'translate(-50%, -75%)',
+        width: '0.45em',
+        height: '0.45em',
+        overflow: 'visible',
+        pointerEvents: 'none',
+      }}
+    >
+      {/* 4-point star path */}
+      <path
+        d="M5 0 L5.6 3.8 L10 5 L5.6 6.2 L5 10 L4.4 6.2 L0 5 L4.4 3.8 Z"
+        fill={color}
+      />
+    </svg>
+  )
+}
+
 export default function DeskioLogo({ size = 'md', className = '' }: Props) {
   const textSize = size === 'sm' ? 'text-base' : size === 'lg' ? 'text-3xl' : 'text-lg'
 
@@ -12,32 +37,7 @@ export default function DeskioLogo({ size = 'md', className = '' }: Props) {
       <span className="text-brand-400">
         <span className="relative inline-block" style={{ lineHeight: 'inherit' }}>
           <span>i</span>
-          {/* Glow layer */}
-          <span style={{
-            position: 'absolute',
-            left: '50%',
-            top: 0,
-            transform: 'translate(-50%, -40%)',
-            width: '0.32em',
-            height: '0.32em',
-            borderRadius: '50%',
-            background: 'rgba(167,139,250,0.8)',
-            filter: 'blur(4px)',
-            opacity: 0.6,
-            pointerEvents: 'none',
-          }} />
-          {/* Core dot */}
-          <span style={{
-            position: 'absolute',
-            left: '50%',
-            top: 0,
-            transform: 'translate(-50%, -40%)',
-            width: '0.12em',
-            height: '0.12em',
-            borderRadius: '50%',
-            background: '#c4b5fd',
-            pointerEvents: 'none',
-          }} />
+          <Spark color="#a78bfa" />
         </span>
         o
       </span>
