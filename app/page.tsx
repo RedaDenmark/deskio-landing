@@ -372,18 +372,24 @@ export default function HomePage() {
               <Link href="/coworking" className="hover:text-gray-300 transition-colors">Coworking & Mødelokaler</Link>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-white/5 pt-6">
-               <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 bg-brand-600 rounded-md flex items-center justify-center">
-                    <Bot className="w-3 h-3 text-white" />
-                  </div>
-                  <DeskioLogo size="sm" />
+          <div className="border-t border-white/5 pt-6 space-y-4">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 bg-brand-600 rounded-md flex items-center justify-center">
+                  <Bot className="w-3 h-3 text-white" />
                 </div>
-          <span>© 2026 Deskio. Alle rettigheder forbeholdes.</span>
-          <div className="flex gap-6">
-            <Link href={`${DASHBOARD_URL}/login`} className="hover:text-gray-400 transition-colors">Log ind</Link>
-            <Link href={`${DASHBOARD_URL}/register`} className="hover:text-gray-400 transition-colors">Opret konto</Link>
-          </div>
+                <DeskioLogo size="sm" />
+              </div>
+              <div className="flex gap-6">
+                <Link href={`${DASHBOARD_URL}/login`} className="hover:text-gray-400 transition-colors">Log ind</Link>
+                <Link href={`${DASHBOARD_URL}/register`} className="hover:text-gray-400 transition-colors">Opret konto</Link>
+                <Link href="/handelsbetingelser" className="hover:text-gray-400 transition-colors">Handelsbetingelser</Link>
+              </div>
+            </div>
+            <div className="text-center text-xs text-gray-600 space-y-1 pb-2">
+              <p>Velkommen til Deskio.dk – Deskio.dk er ejet af TC 1021 APS – Viborgvej 792A – 8471 Sabro – Cvr.: DK 39 52 37 44</p>
+              <p>© 2026 Deskio. Alle rettigheder forbeholdes.</p>
+            </div>
           </div>
         </div>
       </footer>

@@ -42,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.9,
     },
+    {
+      url: `${base}/handelsbetingelser`,
+      lastModified: now,
+      changeFrequency: 'yearly' as const,
+      priority: 0.4,
+    },
     // Niche landing pages — high SEO priority
     ...nichePages.map((slug) => ({
       url: `${base}/${slug}`,
