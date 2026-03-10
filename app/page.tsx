@@ -76,7 +76,7 @@ const STEPS = [
 const PLANS = [
   {
     name: 'Starter',
-    price: '99',
+    price: '299',
     desc: 'Til dig der vil i gang hurtigt',
     features: ['300 samtaler/md', 'Lead capture', 'Vidensbase (2 dokumenter)', 'Chat widget', 'E-mail support'],
     cta: 'Prøv gratis i 14 dage',
@@ -84,28 +84,23 @@ const PLANS = [
   },
   {
     name: 'Vækst',
-    price: '199',
+    price: '599',
     desc: 'Til bookingbaserede virksomheder',
-    features: ['1.000 samtaler/md', 'AI bookingsystem inkluderet', 'Vidensbase (10 dokumenter)', 'Flersproget AI', 'E-mail + chat support'],
+    features: ['1.000 samtaler/md', 'AI bookingsystem inkluderet', 'Flersproget AI', 'SMS notifikationer', 'Vidensbase (10 dokumenter)', 'E-mail + chat support'],
     cta: 'Prøv gratis i 14 dage',
     highlight: true,
   },
   {
     name: 'Pro',
-    price: '399',
+    price: '999',
     desc: 'Til virksomheder der vil skalere',
-    features: ['Ubegrænsede samtaler', 'AI bookingsystem inkluderet', 'Vidensbase (ubegrænset)', 'Flersproget AI', 'Prioriteret support', 'Avanceret analytics', 'Custom AI persona'],
+    features: ['Ubegrænsede samtaler', 'AI bookingsystem inkluderet', 'Vidensbase (ubegrænset)', 'Flersproget AI', 'SMS notifikationer', 'Custom AI persona', 'Avanceret analytics', 'Prioriteret support'],
     cta: 'Prøv gratis i 14 dage',
     highlight: false,
   },
 ]
 
-const ADDONS = [
-  { icon: '📊', name: 'Analytics', desc: 'Samtalestatistik, konverteringsrate og trends.', price: '+49 kr/md' },
-  { icon: '🤖', name: 'Custom AI persona', desc: 'Eget navn og tone-of-voice regler til din AI.', price: '+49 kr/md' },
-  { icon: '🌐', name: 'Ekstra sprog', desc: 'Flersproget AI til Starter-kunder.', price: '+49 kr/md' },
-  { icon: '💬', name: 'SMS notifikationer', desc: 'Send automatiske SMS-beskeder til kunder.', price: '+49 kr/md' },
-]
+
 
 export default function HomePage() {
   return (
@@ -302,7 +297,7 @@ export default function HomePage() {
                     <p className="text-gray-400 text-sm mb-4">{plan.desc}</p>
                     <div className="flex items-baseline gap-1">
                       <span className="text-4xl font-black text-white">{plan.price}</span>
-                      <span className="text-gray-400">kr/md</span>
+                      <span className="text-gray-400">kr./md</span>
                     </div>
                   </div>
 
@@ -328,25 +323,11 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* ── Add-ons ── */}
+          {/* ── Final note ── */}
           <FadeUp>
-            <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
-              <p className="text-xs font-semibold text-brand-400 uppercase tracking-widest mb-2">Tilføj det du har brug for</p>
-              <h3 className="text-xl font-bold text-white mb-1">Udvid med add-ons</h3>
-              <p className="text-gray-400 text-sm mb-6">Tilføj ekstra funktioner til dit abonnement — til en fast lav månedspris.</p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                {ADDONS.map((addon, i) => (
-                  <div key={addon.name} className="bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-brand-500/30 rounded-xl p-4 transition-all duration-300">
-                    <div className="text-2xl mb-3">{addon.icon}</div>
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h4 className="text-sm font-bold text-white">{addon.name}</h4>
-                      <span className="text-xs font-semibold text-brand-400 shrink-0">{addon.price}</span>
-                    </div>
-                    <p className="text-xs text-gray-400 leading-relaxed">{addon.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <p className="text-center text-sm text-gray-500 mt-4">
+              Alle priser er ekskl. moms. Abonnementet faktureres månedligt og kan opsiges når som helst.
+            </p>
           </FadeUp>
         </div>
       </section>

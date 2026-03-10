@@ -3,8 +3,16 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Deskio — AI-receptionist til din virksomhed',
-  description: 'Deskio er din digitale receptionist — tilgængelig 24/7, taler alle sprog, booker aftaler og fanger kundeemner automatisk.',
+  description: 'Deskio er din digitale receptionist — tilgængelig 24/7, taler alle sprog, booker aftaler og fanger kundeemner automatisk. Prøv gratis i 14 dage.',
   metadataBase: new URL('https://deskio.dk'),
+  alternates: {
+    canonical: 'https://deskio.dk',
+  },
+  keywords: [
+    'AI receptionist', 'AI-receptionist', 'chatbot', 'booking system', 'bookingsystem',
+    'AI booking', 'automatisk booking', 'lead capture', 'dansk AI', 'Deskio',
+    'AI til virksomheder', 'digital receptionist', '24/7 kundeservice',
+  ],
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
@@ -17,6 +25,19 @@ export const metadata: Metadata = {
     siteName: 'Deskio',
     locale: 'da_DK',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Deskio — AI-receptionist til din virksomhed',
+    description: 'Svar på kundespørgsmål, book aftaler og fang leads automatisk — hele døgnet.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
 }
 
