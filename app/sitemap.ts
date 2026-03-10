@@ -4,6 +4,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://deskio.dk'
   const now = new Date()
 
+  const nichePages = [
+    'frisoer',
+    'klinik',
+    'fitness',
+    'restaurant',
+    'tandlaege',
+    'konsulent',
+    'tatovering',
+    'autovaerksted',
+    'escape-room',
+    'coworking',
+  ]
+
   return [
     {
       url: base,
@@ -15,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/#funktioner`,
       lastModified: now,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${base}/#priser`,
@@ -24,16 +37,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${base}/#saadan-virker-det`,
-      lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
       url: 'https://dashboard.deskio.dk/register',
       lastModified: now,
       changeFrequency: 'yearly',
       priority: 0.9,
     },
+    // Niche landing pages — high SEO priority
+    ...nichePages.map((slug) => ({
+      url: `${base}/${slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
   ]
 }

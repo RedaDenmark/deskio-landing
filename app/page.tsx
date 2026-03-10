@@ -355,7 +355,24 @@ export default function HomePage() {
 
       {/* ── FOOTER ──────────────────────────────────────────────────────────── */}
       <footer className="border-t border-white/5 py-10 px-4">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600">
+        <div className="max-w-6xl mx-auto space-y-8">
+          {/* Niche links */}
+          <div>
+            <p className="text-xs font-semibold text-gray-600 uppercase tracking-widest mb-4">AI-receptionist til din branche</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+              <Link href="/frisoer" className="hover:text-gray-300 transition-colors">Frisør & Skønhed</Link>
+              <Link href="/klinik" className="hover:text-gray-300 transition-colors">Klinik & Sundhed</Link>
+              <Link href="/fitness" className="hover:text-gray-300 transition-colors">Fitness & Yoga</Link>
+              <Link href="/restaurant" className="hover:text-gray-300 transition-colors">Restaurant & Café</Link>
+              <Link href="/tandlaege" className="hover:text-gray-300 transition-colors">Tandlæge</Link>
+              <Link href="/konsulent" className="hover:text-gray-300 transition-colors">Konsulent & Coach</Link>
+              <Link href="/tatovering" className="hover:text-gray-300 transition-colors">Tatovering & Piercing</Link>
+              <Link href="/autovaerksted" className="hover:text-gray-300 transition-colors">Autoværksted</Link>
+              <Link href="/escape-room" className="hover:text-gray-300 transition-colors">Escape Room</Link>
+              <Link href="/coworking" className="hover:text-gray-300 transition-colors">Coworking & Mødelokaler</Link>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-gray-600 border-t border-white/5 pt-6">
                <div className="flex items-center gap-2">
                   <div className="w-6 h-6 bg-brand-600 rounded-md flex items-center justify-center">
                     <Bot className="w-3 h-3 text-white" />
@@ -366,6 +383,7 @@ export default function HomePage() {
           <div className="flex gap-6">
             <Link href={`${DASHBOARD_URL}/login`} className="hover:text-gray-400 transition-colors">Log ind</Link>
             <Link href={`${DASHBOARD_URL}/register`} className="hover:text-gray-400 transition-colors">Opret konto</Link>
+          </div>
           </div>
         </div>
       </footer>
