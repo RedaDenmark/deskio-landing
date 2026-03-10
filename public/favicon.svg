@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="#7c3aed"/>
+  <!-- Letter D, bold and centered -->
+  <text x="6" y="24" font-family="Inter, Arial Black, sans-serif" font-weight="900" font-size="23" fill="white">D</text>
+  <!-- Small accent dot top-right -->
+  <circle cx="26" cy="7" r="3" fill="#a78bfa"/>
+</svg>
