@@ -76,7 +76,7 @@ const STEPS = [
 const PLANS = [
   {
     name: 'Starter',
-    price: '299',
+    price: '99',
     desc: 'Til dig der vil i gang hurtigt',
     features: ['300 samtaler/md', 'Lead capture', 'Vidensbase (2 dokumenter)', 'Chat widget', 'E-mail support'],
     cta: 'Prøv gratis i 14 dage',
@@ -84,7 +84,7 @@ const PLANS = [
   },
   {
     name: 'Vækst',
-    price: '599',
+    price: '199',
     desc: 'Til bookingbaserede virksomheder',
     features: ['1.000 samtaler/md', 'AI bookingsystem inkluderet', 'Flersproget AI', 'SMS notifikationer', 'Vidensbase (10 dokumenter)', 'E-mail + chat support'],
     cta: 'Prøv gratis i 14 dage',
@@ -92,7 +92,7 @@ const PLANS = [
   },
   {
     name: 'Pro',
-    price: '999',
+    price: '399',
     desc: 'Til virksomheder der vil skalere',
     features: ['Ubegrænsede samtaler', 'AI bookingsystem inkluderet', 'Vidensbase (ubegrænset)', 'Flersproget AI', 'SMS notifikationer', 'Custom AI persona', 'Avanceret analytics', 'Prioriteret support'],
     cta: 'Prøv gratis i 14 dage',
