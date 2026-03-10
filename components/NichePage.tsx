@@ -61,21 +61,21 @@ const DEFAULT_STEPS = [
 const PLANS = [
   {
     name: 'Starter',
-    price: '299',
+    price: '99',
     desc: 'Til dig der vil i gang hurtigt',
     features: ['300 samtaler/md', 'Lead capture', 'Chat widget', 'E-mail support'],
     highlight: false,
   },
   {
     name: 'Vækst',
-    price: '599',
+    price: '199',
     desc: 'Til bookingbaserede virksomheder',
     features: ['1.000 samtaler/md', 'AI bookingsystem', 'Flersproget AI', 'SMS notifikationer'],
     highlight: true,
   },
   {
     name: 'Pro',
-    price: '999',
+    price: '399',
     desc: 'Alt inkluderet',
     features: ['Ubegrænsede samtaler', 'Custom AI persona', 'Avanceret analytics', 'Prioriteret support'],
     highlight: false,
