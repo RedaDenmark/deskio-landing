@@ -16,10 +16,11 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.png', type: 'image/png', sizes: '64x64' },
       { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.png',
+    shortcut: '/favicon.ico',
     apple: '/favicon.png',
   },
   openGraph: {
@@ -48,6 +49,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="da">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.png" type="image/png" sizes="64x64" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+      </head>
       <body>
         {children}
         <CookieBanner />
