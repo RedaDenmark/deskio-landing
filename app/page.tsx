@@ -391,6 +391,37 @@ export default function HomePage() {
             <div className="text-center text-xs text-gray-600 space-y-1 pb-2">
               <p>Velkommen til Deskio.dk – Deskio.dk er ejet af TC 1021 APS – Viborgvej 792A – 8471 Sabro – Cvr.: DK 39 52 37 44</p>
               <p>© 2026 Deskio. Alle rettigheder forbeholdes.</p>
+              {/* ── ClearWeb stitched badge ── */}
+              <div className="flex justify-center pt-4">
+                <a
+                  href="https://www.clearweb.dk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 px-5 py-2.5
+                    border-2 border-dashed border-white/20 rounded-sm
+                    bg-white/[0.04] hover:bg-white/[0.07]
+                    hover:border-white/35
+                    transition-all duration-300
+                    shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_2px_12px_rgba(0,0,0,0.4)]
+                    hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_4px_20px_rgba(99,102,241,0.15)]
+                    relative"
+                  style={{ letterSpacing: '0.12em' }}
+                >
+                  {/* Corner stitch marks */}
+                  <span className="absolute top-1 left-1 w-1.5 h-1.5 border-t border-l border-white/25 rounded-tl-sm" />
+                  <span className="absolute top-1 right-1 w-1.5 h-1.5 border-t border-r border-white/25 rounded-tr-sm" />
+                  <span className="absolute bottom-1 left-1 w-1.5 h-1.5 border-b border-l border-white/25 rounded-bl-sm" />
+                  <span className="absolute bottom-1 right-1 w-1.5 h-1.5 border-b border-r border-white/25 rounded-br-sm" />
+
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.15em] text-gray-500 group-hover:text-gray-400 transition-colors">
+                    Udviklet af
+                  </span>
+                  <span className="text-[11px] font-black uppercase tracking-[0.15em] text-white/80 group-hover:text-white transition-colors">
+                    ClearWeb
+                  </span>
+                  <span className="text-sm">🇩🇰</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
