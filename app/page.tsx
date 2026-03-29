@@ -8,7 +8,6 @@ import EraTimeline from '@/components/EraTimeline'
 import DeskioLogo from '@/components/DeskioLogo'
 
 const DASHBOARD_URL = 'https://dashboard.deskio.dk'
-const WIDGET_BUSINESS_ID = process.env.NEXT_PUBLIC_DESKIO_WIDGET_BUSINESS_ID || ''
 
 const ERAS = [
   {
@@ -398,14 +397,13 @@ export default function HomePage() {
       </footer>
 
       {/* Deskio chat widget — powered by our own AI receptionist */}
-      {WIDGET_BUSINESS_ID && (
-        // eslint-disable-next-line @next/next/no-sync-scripts
-        <script
-          src="https://api.deskio.dk/widget.js"
-          data-business-id={WIDGET_BUSINESS_ID}
-          async
-        />
-      )}
+      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+      <script
+        src="https://api.deskio.dk/widget.js"
+        data-business-id="b7e75722-9ab4-44e6-8766-85212d4b6fc2"
+        data-color="#6366f1"
+        async
+      />
     </div>
   )
 }
