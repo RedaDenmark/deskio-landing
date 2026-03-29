@@ -14,7 +14,8 @@
     "react-dom": "^18.3.1",
     "framer-motion": "^11.3.0",
     "lucide-react": "^0.394.0",
-    "clsx": "^2.1.1"
+    "clsx": "^2.1.1",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "typescript": "^5.4.5",
