@@ -417,9 +417,14 @@ export default function HomePage() {
                     Udviklet af
                   </span>
                   <span className="text-[11px] font-black uppercase tracking-[0.15em] text-white/80 group-hover:text-white transition-colors">
-                    ClearWeb
+                    Clear<span className="text-orange-400 group-hover:text-orange-300 transition-colors">Web</span>
                   </span>
-                  <span className="text-sm">🇩🇰</span>
+                  {/* Inline Danish flag SVG — always renders correctly */}
+                  <svg width="18" height="13" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg" className="rounded-[2px] shadow-sm flex-shrink-0">
+                    <rect width="18" height="13" fill="#C60C30"/>
+                    <rect x="5" width="3" height="13" fill="white"/>
+                    <rect y="5" width="18" height="3" fill="white"/>
+                  </svg>
                 </a>
               </div>
             </div>
