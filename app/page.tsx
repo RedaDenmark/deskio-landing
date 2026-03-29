@@ -8,6 +8,7 @@ import EraTimeline from '@/components/EraTimeline'
 import DeskioLogo from '@/components/DeskioLogo'
 
 const DASHBOARD_URL = 'https://dashboard.deskio.dk'
+const WIDGET_BUSINESS_ID = process.env.NEXT_PUBLIC_DESKIO_WIDGET_BUSINESS_ID || ''
 
 const ERAS = [
   {
@@ -380,9 +381,11 @@ export default function HomePage() {
                 </div>
                 <DeskioLogo size="sm" />
               </div>
-              <div className="flex gap-6">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-1">
                 <Link href={`${DASHBOARD_URL}/login`} className="hover:text-gray-400 transition-colors">Log ind</Link>
                 <Link href={`${DASHBOARD_URL}/register`} className="hover:text-gray-400 transition-colors">Opret konto</Link>
+                <a href="mailto:support@deskio.dk" className="hover:text-gray-400 transition-colors">Support</a>
+                <Link href="/privatlivspolitik" className="hover:text-gray-400 transition-colors">Privatlivspolitik</Link>
                 <Link href="/handelsbetingelser" className="hover:text-gray-400 transition-colors">Handelsbetingelser</Link>
               </div>
             </div>
@@ -393,6 +396,16 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Deskio chat widget — powered by our own AI receptionist */}
+      {WIDGET_BUSINESS_ID && (
+        // eslint-disable-next-line @next/next/no-sync-scripts
+        <script
+          src="https://api.deskio.dk/widget.js"
+          data-business-id={WIDGET_BUSINESS_ID}
+          async
+        />
+      )}
     </div>
   )
 }
