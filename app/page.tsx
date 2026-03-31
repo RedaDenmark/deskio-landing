@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { Bot, Zap, Globe, Users, Calendar, BookOpen, ArrowRight, Check } from 'lucide-react'
 import Typewriter from '@/components/Typewriter'
 import ChatDemo from '@/components/ChatDemo'
@@ -439,12 +440,11 @@ export default function HomePage() {
       </footer>
 
       {/* Deskio chat widget — powered by our own AI receptionist */}
-      {/* eslint-disable-next-line @next/next/no-sync-scripts */}
-      <script
+      <Script
         src="https://api.deskio.dk/widget.js"
         data-business-id="b7e75722-9ab4-44e6-8766-85212d4b6fc2"
         data-color="#6366f1"
-        async
+        strategy="afterInteractive"
       />
     </div>
   )
