@@ -100,7 +100,12 @@ const PLANS = [
   },
 ]
 
-
+const ADDONS = [
+  { icon: '📊', name: 'Analytics', desc: 'Samtalestatistik, konverteringsrate og trends.', price: '+49 kr/md inkl. moms' },
+  { icon: '🤖', name: 'Custom AI persona', desc: 'Eget navn og tone-of-voice regler til din AI.', price: '+49 kr/md inkl. moms' },
+  { icon: '🌐', name: 'Ekstra sprog', desc: 'Flersproget AI til Starter-kunder.', price: '+49 kr/md inkl. moms' },
+  { icon: '💬', name: 'SMS notifikationer', desc: 'Send automatiske SMS-beskeder til kunder.', price: '+49 kr/md inkl. moms' },
+]
 
 export default function HomePage() {
   return (
@@ -299,6 +304,7 @@ export default function HomePage() {
                       <span className="text-4xl font-black text-white">{plan.price}</span>
                       <span className="text-gray-400">kr./md</span>
                     </div>
+                    <p className="text-xs text-gray-500 mt-1">inkl. moms</p>
                   </div>
 
                   <ul className="space-y-3 mb-8 flex-1">
