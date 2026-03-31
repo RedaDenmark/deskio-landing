@@ -332,7 +332,7 @@ export default function HomePage() {
           {/* ── Final note ── */}
           <FadeUp>
             <p className="text-center text-sm text-gray-500 mt-4">
-              Alle priser er ekskl. moms. Abonnementet faktureres månedligt og kan opsiges når som helst.
+              Alle priser er inkl. moms. Abonnementet faktureres månedligt og kan opsiges når som helst.
             </p>
           </FadeUp>
         </div>
