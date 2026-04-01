@@ -127,7 +127,7 @@ export default function ChatDemo() {
       {/* Messages — fixed height, scrolls to latest message automatically */}
       <div
         ref={msgsRef}
-        className="space-y-3 h-[280px] overflow-y-auto scroll-smooth transition-opacity duration-300 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+        className="space-y-3 h-[320px] overflow-y-auto scroll-smooth transition-opacity duration-300 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
         style={{ opacity: fading ? 0 : 1 }}
       >
         {current.messages.map((msg, i) =>
