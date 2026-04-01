@@ -176,28 +176,6 @@ export default function HomePage() {
 
               <p className="text-xs text-gray-600 mt-4">Gratis at starte. Intet kreditkort kræves.</p>
 
-              {/* Payment trust strip */}
-              <div className="flex items-center gap-3 mt-5 justify-center lg:justify-start flex-wrap">
-                <span className="text-xs text-gray-600">Betaling via:</span>
-                {/* Visa */}
-                <div className="bg-white rounded-md px-2.5 py-1 flex items-center h-7">
-                  <span className="text-[#1a1f71] font-black italic text-sm tracking-tight leading-none">VISA</span>
-                </div>
-                {/* Mastercard */}
-                <div className="flex items-center h-7">
-                  <div className="w-6 h-6 rounded-full bg-[#eb001b]" />
-                  <div className="w-6 h-6 rounded-full bg-[#f79e1b] -ml-3 opacity-90" />
-                </div>
-                {/* MobilePay */}
-                <div className="bg-[#5a78ff] rounded-md px-2.5 py-1 h-7 flex items-center">
-                  <span className="text-white font-bold text-[11px] leading-none tracking-tight">MobilePay</span>
-                </div>
-                {/* Apple Pay */}
-                <div className="bg-black border border-white/20 rounded-md px-2.5 py-1 h-7 flex items-center gap-0.5">
-                  <svg className="w-3 h-3.5 text-white fill-white" viewBox="0 0 814 1000"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-157.2-108.9L-32 742.4c0 0 0-4.7 0-4.7.7-.3 159.5-61.5 159.5-267.7 0-174.7-118.9-268.1-119.9-269-.3-.3-.9-1.5-.9-1.5.2-.1 38.2-15.8 86.3-15.8 127.6 0 202.5 82.8 205.4 83.8.5.5 1.1.7 1.1.7.3-.3 40.8-83.8 148.1-83.8 12.4 0 172.7 1.5 266.1 150.9zm-207.3-333.9c37.5-44.9 63.5-107.8 63.5-170.7 0-8.5-.5-17.2-1.9-24.3-60.1 2.3-132.4 39.9-176.1 91.8-34.2 40.5-64.4 103.8-64.4 167.5 0 9.2 1.5 18.3 2.1 21.1 3.7.5 9.9 1.3 16.2 1.3 54.3 0 121.3-35.7 160.6-86.7z"/></svg>
-                  <span className="text-white font-semibold text-[11px] leading-none">Pay</span>
-                </div>
-              </div>
             </div>
 
             {/* Right — live chat demo */}
@@ -437,6 +415,30 @@ export default function HomePage() {
 
                 </div>
               </div>
+
+              {/* Payment trust strip — shown in context of payments, not signup */}
+              <div className="flex items-center gap-3 mt-5 justify-center flex-wrap">
+                <span className="text-xs text-gray-500">Dine kunder betaler via:</span>
+                {/* Visa */}
+                <div className="bg-white rounded-md px-2.5 py-1 flex items-center h-7">
+                  <span className="text-[#1a1f71] font-black italic text-sm tracking-tight leading-none">VISA</span>
+                </div>
+                {/* Mastercard */}
+                <div className="flex items-center h-7">
+                  <div className="w-6 h-6 rounded-full bg-[#eb001b]" />
+                  <div className="w-6 h-6 rounded-full bg-[#f79e1b] -ml-3 opacity-90" />
+                </div>
+                {/* MobilePay */}
+                <div className="bg-[#5a78ff] rounded-md px-2.5 py-1 h-7 flex items-center">
+                  <span className="text-white font-bold text-[11px] leading-none tracking-tight">MobilePay</span>
+                </div>
+                {/* Apple Pay */}
+                <div className="bg-black border border-white/20 rounded-md px-2.5 py-1 h-7 flex items-center gap-0.5">
+                  <svg className="w-3 h-3.5 text-white fill-white" viewBox="0 0 814 1000"><path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-37.5-157.2-108.9L-32 742.4c0 0 0-4.7 0-4.7.7-.3 159.5-61.5 159.5-267.7 0-174.7-118.9-268.1-119.9-269-.3-.3-.9-1.5-.9-1.5.2-.1 38.2-15.8 86.3-15.8 127.6 0 202.5 82.8 205.4 83.8.5.5 1.1.7 1.1.7.3-.3 40.8-83.8 148.1-83.8 12.4 0 172.7 1.5 266.1 150.9zm-207.3-333.9c37.5-44.9 63.5-107.8 63.5-170.7 0-8.5-.5-17.2-1.9-24.3-60.1 2.3-132.4 39.9-176.1 91.8-34.2 40.5-64.4 103.8-64.4 167.5 0 9.2 1.5 18.3 2.1 21.1 3.7.5 9.9 1.3 16.2 1.3 54.3 0 121.3-35.7 160.6-86.7z"/></svg>
+                  <span className="text-white font-semibold text-[11px] leading-none">Pay</span>
+                </div>
+              </div>
+
             </FadeUp>
 
           </div>
