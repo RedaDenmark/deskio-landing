@@ -176,8 +176,14 @@ export default function HomePage() {
 
               <p className="text-xs text-gray-600 mt-4">Gratis at starte. Intet kreditkort kræves.</p>
 
+            </div>
+
+            {/* Right — live chat demo + payment trust strip below */}
+            <div className="flex-shrink-0 w-full max-w-sm animate-float flex flex-col items-center gap-4">
+              <ChatDemo />
+
               {/* Payment trust strip */}
-              <div className="flex items-center gap-3 mt-5 justify-center lg:justify-start flex-wrap">
+              <div className="flex items-center gap-3 justify-center flex-wrap">
                 <span className="text-xs text-gray-500">Dine kunder betaler via:</span>
                 {/* Visa */}
                 <div className="bg-white rounded-md px-2.5 py-1 flex items-center h-7">
@@ -198,12 +204,6 @@ export default function HomePage() {
                   <span className="text-white font-semibold text-[11px] leading-none">Pay</span>
                 </div>
               </div>
-
-            </div>
-
-            {/* Right — live chat demo */}
-            <div className="flex-shrink-0 w-full max-w-sm animate-float">
-              <ChatDemo />
             </div>
           </div>
         </div>
