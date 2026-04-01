@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import { Bot, Zap, Globe, Users, Calendar, BookOpen, ArrowRight, Check } from 'lucide-react'
+import { Bot, Zap, Globe, Users, Calendar, BookOpen, ArrowRight, Check, CreditCard, ShoppingBag } from 'lucide-react'
 import Typewriter from '@/components/Typewriter'
 import ChatDemo from '@/components/ChatDemo'
 import FadeUp from '@/components/FadeUp'
@@ -50,7 +50,7 @@ const ERAS = [
   {
     year: 'Nu',
     title: 'Deskio',
-    desc: 'Din AI-receptionist. Tilgængelig 24/7. Taler alle sprog. Booker aftaler. Fanger leads. Kender din virksomhed indefra og ud.',
+    desc: 'Din AI-receptionist. Tilgængelig 24/7. Taler alle sprog. Booker aftaler. Fanger leads. Modtager betalinger. Kender din virksomhed indefra og ud.',
     image: '/images/era5-deskio.png',
     filter: 'none',
     bg: 'from-brand-950 to-slate-950',
@@ -60,12 +60,14 @@ const ERAS = [
 ]
 
 const FEATURES = [
-  { icon: Zap,      title: '24/7 tilgængelighed',   desc: 'Svar på kundespørgsmål midt om natten, i weekenden, på helligdage. Altid.' },
-  { icon: Globe,    title: 'Flersproget',             desc: 'Dansk, engelsk, arabisk og mange flere. AI\'en svarer automatisk på kundens sprog.' },
-  { icon: Users,    title: 'Lead capture',            desc: 'Fanger automatisk navn, e-mail og telefon fra interesserede besøgende.' },
-  { icon: Calendar, title: 'Bookinger',               desc: 'AI\'en kan oprette aftaler direkte i dit system — ingen menneskelig indblanding.' },
-  { icon: BookOpen, title: 'Vidensbase',              desc: 'Upload dine priser, services og FAQ. AI\'en svarer præcist baseret på dit indhold.' },
-  { icon: Bot,      title: 'Nem opsætning',           desc: 'Én linje kode på din hjemmeside. Ingen integration, ingen udviklere nødvendige.' },
+  { icon: Zap,         title: '24/7 tilgængelighed',   desc: 'Svar på kundespørgsmål midt om natten, i weekenden, på helligdage. Altid.' },
+  { icon: Globe,       title: 'Flersproget',             desc: 'Dansk, engelsk, arabisk og mange flere. AI\'en svarer automatisk på kundens sprog.' },
+  { icon: Users,       title: 'Lead capture',            desc: 'Fanger automatisk navn, e-mail og telefon fra interesserede besøgende.' },
+  { icon: Calendar,    title: 'Bookinger',               desc: 'AI\'en kan oprette aftaler direkte i dit system — ingen menneskelig indblanding.' },
+  { icon: CreditCard,  title: 'In-chat betalinger',      desc: 'Kunder betaler direkte i chatten. Automatisk kvittering sendt til dem med det samme.' },
+  { icon: BookOpen,    title: 'Vidensbase',              desc: 'Upload dine priser, services og FAQ. AI\'en svarer præcist baseret på dit indhold.' },
+  { icon: ShoppingBag, title: 'Ordrestyring',            desc: 'Alle ordrer og betalinger samlet i dit dashboard — med live status og kundekontakt.' },
+  { icon: Bot,         title: 'Nem opsætning',           desc: 'Én linje kode på din hjemmeside. Ingen integration, ingen udviklere nødvendige.' },
 ]
 
 const STEPS = [
@@ -87,7 +89,7 @@ const PLANS = [
     name: 'Vækst',
     price: '199',
     desc: 'Til bookingbaserede virksomheder',
-    features: ['1.000 samtaler/md', 'AI bookingsystem inkluderet', 'Flersproget AI', 'SMS notifikationer', 'Vidensbase (10 dokumenter)', 'E-mail + chat support'],
+    features: ['1.000 samtaler/md', 'AI bookingsystem inkluderet', 'In-chat betalinger (Mollie)', 'Automatisk kvittering til kunder', 'Flersproget AI', 'SMS notifikationer', 'Vidensbase (10 dokumenter)', 'E-mail + chat support'],
     cta: 'Prøv gratis i 14 dage',
     highlight: true,
   },
@@ -95,7 +97,7 @@ const PLANS = [
     name: 'Pro',
     price: '399',
     desc: 'Til virksomheder der vil skalere',
-    features: ['Ubegrænsede samtaler', 'AI bookingsystem inkluderet', 'Vidensbase (ubegrænset)', 'Flersproget AI', 'SMS notifikationer', 'Custom AI persona', 'Avanceret analytics', 'Prioriteret support'],
+    features: ['Ubegrænsede samtaler', 'AI bookingsystem inkluderet', 'In-chat betalinger (Mollie)', 'Automatisk kvittering til kunder', 'Vidensbase (ubegrænset)', 'Flersproget AI', 'SMS notifikationer', 'Custom AI persona', 'Avanceret analytics', 'Prioriteret support'],
     cta: 'Prøv gratis i 14 dage',
     highlight: false,
   },
@@ -223,7 +225,7 @@ export default function HomePage() {
             </p>
           </FadeUp>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {FEATURES.map((f, i) => (
               <FadeUp key={f.title} delay={i * 80}>
                 <div className="group bg-white/[0.03] hover:bg-white/[0.06] border border-white/5 hover:border-brand-500/30 rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1">
@@ -269,6 +271,151 @@ export default function HomePage() {
                 </FadeUp>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PAYMENT SHOWCASE ────────────────────────────────────────────────── */}
+      <section className="py-24 px-4 bg-white/[0.015] border-y border-white/5 overflow-hidden">
+        <div className="max-w-6xl mx-auto">
+          <FadeUp className="text-center mb-16">
+            <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3">Ny funktion</p>
+            <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
+              Din AI sælger —<br />
+              <span className="gradient-text">ikke kun snakker</span>
+            </h2>
+            <p className="text-gray-400 text-lg max-w-xl mx-auto">
+              Kunder kan betale direkte i chatten. Ingen omveje, ingen manuelle opfølgninger. Fra spørgsmål til betalt ordre på under et minut.
+            </p>
+          </FadeUp>
+
+          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+            {/* Left — benefits */}
+            <FadeUp className="flex-1 space-y-6">
+              {[
+                { icon: '💬', title: 'Kunden spørger — AI\'en sælger', desc: 'Når en kunde spørger om pris, svarer AI\'en præcist og tilbyder at oprette en betaling med det samme.' },
+                { icon: '💳', title: 'Sikker betaling via Mollie', desc: 'Betalingen sker direkte på virksomhedens egen Mollie-konto. Deskio berører aldrig pengene.' },
+                { icon: '✉️', title: 'Automatisk kvittering', desc: 'Kunden modtager en professionel kvittering på e-mail med det samme betalingen bekræftes.' },
+                { icon: '📊', title: 'Ordrer i dit dashboard', desc: 'Alle indkommende ordrer samles i dit dashboard med live-status, kundeinfo og lydnotifikation.' },
+              ].map((item, i) => (
+                <FadeUp key={i} delay={i * 100}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-green-900/30 border border-green-500/20 rounded-xl flex items-center justify-center flex-shrink-0 text-lg">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-white mb-1">{item.title}</h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                </FadeUp>
+              ))}
+
+              <FadeUp delay={400}>
+                <div className="flex flex-wrap gap-2 pt-2">
+                  {['Mollie Connect', 'Automatisk kvittering', 'Alle korttyper', 'Apple Pay', 'MobilePay'].map(tag => (
+                    <span key={tag} className="text-xs bg-white/5 border border-white/10 text-gray-400 px-3 py-1.5 rounded-full">{tag}</span>
+                  ))}
+                </div>
+              </FadeUp>
+            </FadeUp>
+
+            {/* Right — chat mockup */}
+            <FadeUp className="flex-shrink-0 w-full max-w-sm" delay={200}>
+              <div className="bg-[#0d0d14] rounded-2xl border border-white/10 shadow-2xl overflow-hidden">
+
+                {/* Chat header */}
+                <div className="flex items-center gap-3 px-4 py-3 bg-white/[0.04] border-b border-white/10">
+                  <div className="w-8 h-8 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Bot className="w-4 h-4 text-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-semibold text-white">Deskio AI</p>
+                    <p className="text-[10px] text-green-400 flex items-center gap-1">
+                      <span className="inline-block w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse" /> Online
+                    </p>
+                  </div>
+                </div>
+
+                {/* Messages */}
+                <div className="p-4 space-y-3 text-sm">
+
+                  {/* User */}
+                  <div className="flex justify-end">
+                    <div className="bg-brand-600/30 border border-brand-500/20 rounded-2xl rounded-tr-sm px-3 py-2 text-white max-w-[78%]">
+                      Hvad koster Basis Pakken?
+                    </div>
+                  </div>
+
+                  {/* AI */}
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Bot className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="bg-white/[0.05] rounded-2xl rounded-tl-sm px-3 py-2 text-gray-300 max-w-[78%]">
+                      Basis Pakken koster <span className="text-white font-bold">8.995 kr</span>. Vil du betale nu? 😊
+                    </div>
+                  </div>
+
+                  {/* User */}
+                  <div className="flex justify-end">
+                    <div className="bg-brand-600/30 border border-brand-500/20 rounded-2xl rounded-tr-sm px-3 py-2 text-white max-w-[78%]">
+                      Ja tak!
+                    </div>
+                  </div>
+
+                  {/* AI — asks details */}
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Bot className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="bg-white/[0.05] rounded-2xl rounded-tl-sm px-3 py-2 text-gray-300 max-w-[78%]">
+                      Hvad er dit navn og e-mailadresse?
+                    </div>
+                  </div>
+
+                  {/* User */}
+                  <div className="flex justify-end">
+                    <div className="bg-brand-600/30 border border-brand-500/20 rounded-2xl rounded-tr-sm px-3 py-2 text-white max-w-[78%]">
+                      Kurt, kurt@mail.dk
+                    </div>
+                  </div>
+
+                  {/* AI — payment link */}
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 bg-brand-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <Bot className="w-3 h-3 text-white" />
+                    </div>
+                    <div className="bg-white/[0.05] rounded-2xl rounded-tl-sm px-3 py-2 text-gray-300 max-w-[82%]">
+                      <p className="mb-2 text-xs">Her er dit betalingslink 👇</p>
+                      <div className="bg-brand-600 rounded-xl px-3 py-2.5 text-center text-white text-xs font-bold flex items-center justify-center gap-1.5">
+                        <CreditCard className="w-3.5 h-3.5" /> Betal 8.995 kr
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* AI — confirmed */}
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1 text-[10px]">
+                      ✓
+                    </div>
+                    <div className="bg-green-900/20 border border-green-500/20 rounded-2xl rounded-tl-sm px-3 py-2 text-green-300 max-w-[82%] text-xs leading-relaxed">
+                      Din betaling er modtaget, mange tak. 🎉 Kvittering sendt til kurt@mail.dk
+                    </div>
+                  </div>
+
+                  {/* Receipt badge */}
+                  <div className="flex justify-center pt-1">
+                    <div className="inline-flex items-center gap-1.5 bg-white/[0.04] border border-white/10 rounded-full px-3 py-1 text-[10px] text-gray-500">
+                      ✉️ Kvittering sendt · <span className="text-green-400">Betalt ✓</span>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </FadeUp>
+
           </div>
         </div>
       </section>
