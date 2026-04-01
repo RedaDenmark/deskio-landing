@@ -304,8 +304,8 @@ export default function HomePage() {
           <FadeUp className="text-center mb-16">
             <p className="text-green-400 text-sm font-semibold uppercase tracking-widest mb-3">Ny funktion</p>
             <h2 className="text-3xl md:text-5xl font-black tracking-tight mb-4">
-              Din AI sælger —<br />
-              <span className="gradient-text">ikke kun snakker</span>
+              Fra svar til salg —<br />
+              <span className="gradient-text">helt automatisk</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-xl mx-auto">
               Kunder kan betale direkte i chatten. Ingen omveje, ingen manuelle opfølgninger. Fra spørgsmål til betalt ordre på under et minut.
