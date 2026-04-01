@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { Bot, Zap, Globe, Users, Calendar, BookOpen, ArrowRight, Check, CreditCard, ShoppingBag } from 'lucide-react'
 import Typewriter from '@/components/Typewriter'
+import Navbar from '@/components/Navbar'
 import ChatDemo from '@/components/ChatDemo'
 import FadeUp from '@/components/FadeUp'
 import EraTimeline from '@/components/EraTimeline'
@@ -115,28 +116,7 @@ export default function HomePage() {
     <div className="min-h-screen bg-[#0a0a0f] text-white overflow-x-hidden">
 
       {/* ── NAV ─────────────────────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0f]/80 backdrop-blur-md border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center">
-              <Bot className="w-4 h-4 text-white" />
-            </div>
-            <DeskioLogo size="md" />
-          </div>
-          <div className="hidden md:flex items-center gap-8 text-sm text-gray-400">
-            <a href="#evolution" className="hover:text-white transition-colors">Historien</a>
-            <a href="#features" className="hover:text-white transition-colors">Funktioner</a>
-            <a href="#how" className="hover:text-white transition-colors">Sådan virker det</a>
-            <a href="#pricing" className="hover:text-white transition-colors">Priser</a>
-          </div>
-          <div className="flex items-center gap-3">
-            <Link href={`${DASHBOARD_URL}/login`} className="hidden md:block text-sm text-gray-400 hover:text-white transition-colors">Log ind</Link>
-            <Link href={`${DASHBOARD_URL}/register`} className="bg-brand-600 hover:bg-brand-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
-              Start gratis
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* ── HERO ────────────────────────────────────────────────────────────── */}
       <section className="relative pt-32 pb-32 px-4 bg-grid overflow-hidden">
