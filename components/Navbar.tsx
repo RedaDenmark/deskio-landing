@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Bot, Menu, X } from 'lucide-react'
 import DeskioLogo from '@/components/DeskioLogo'
 
-const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://app.deskio.dk'
+const DASHBOARD_URL = process.env.NEXT_PUBLIC_DASHBOARD_URL || 'https://dashboard.deskio.dk'
 
 const NAV_LINKS = [
   { label: 'Historien',      href: '#evolution' },
