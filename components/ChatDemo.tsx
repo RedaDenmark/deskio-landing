@@ -116,9 +116,9 @@ export default function ChatDemo() {
         </div>
       </div>
 
-      {/* Messages */}
+      {/* Messages — fixed height so layout never jumps between scenarios */}
       <div
-        className="space-y-3 min-h-[200px] transition-opacity duration-300"
+        className="space-y-3 h-[280px] overflow-hidden transition-opacity duration-300"
         style={{ opacity: fading ? 0 : 1 }}
       >
         {current.messages.map((msg, i) =>
